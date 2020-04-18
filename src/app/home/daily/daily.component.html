@@ -1,0 +1,20 @@
+<div style="margin-bottom: 10px;">
+    total: {{ cases?.length || 'Загрузка'}}
+</div>
+
+<ng-container *ngIf='cases; else loading'>
+    <app-case *ngFor="let case of cases"
+        [case]='case'
+        (selected)='onSelectCase(case)'
+    >
+    </app-case>  
+</ng-container>
+
+<ng-template #loading>
+    loading...
+</ng-template>
+
+<div style="margin-top: 30px;" *ngIf='selectedCase'>
+    Выбранный case:
+    <app-case [case]='selectedCase'></app-case>
+</div>

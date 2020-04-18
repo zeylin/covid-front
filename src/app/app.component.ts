@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HeaderRoutes } from './models';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'covid-front';
+
+  routes: HeaderRoutes[] = [
+    {
+      route: 'home',
+      title: 'home'
+    },
+    {
+      route: 'by-date',
+      title: 'by date'
+    },
+    {
+      route: 'create',
+      title: 'create'
+    }
+  ]
 }

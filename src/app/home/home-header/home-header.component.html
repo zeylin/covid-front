@@ -1,0 +1,9 @@
+<div class='header'>
+    <a 
+        *ngFor='let route of links;' 
+        [routerLink]='route.route'
+        routerLinkActive='active'
+    >
+        {{route.title}}
+    </a>
+</div>
